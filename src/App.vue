@@ -9,7 +9,7 @@
       <input v-model="texte" placeholder="Enter texte" />
       <button @click="demarrer()">Démarrer</button>
       <p> Temps : {{ temps }}</p>
-      <p> Char/sec : {{ charactereParSeconde.value.toFixed(2) }}</p>
+      <p> Char/sec : {{ charactereParSeconde }}</p>
     </body>
     <footer>
 
@@ -23,7 +23,7 @@
   const texte = ref('')
   const temps = ref (0)
   const motASaisir = ref('')
-  const charactereParSeconde = ref(0)
+  const charactereParSeconde = ref('')
   let enMarche = false
   let intervalID1 = setInterval(() => {})
   let intervalID2 = setInterval(() => {})
@@ -93,7 +93,7 @@
   function RegarderSiReussi () {
     const saisieSansEspace = texte.value.replaceAll(' ', '')
     const motsSansEspace = lesMots.replaceAll(' ', '')
-    charactereParSeconde.value = (lesMots.length / temps.value)
+    charactereParSeconde.value = (lesMots.length / temps.value).toFixed(2)
     if (saisieSansEspace === motsSansEspace) {
       arreter()
     }
