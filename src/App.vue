@@ -49,6 +49,8 @@
     'soleil',
     'lune',
     'rivière',
+    'grenouille',
+    'avoir',
   ]
 
   /**
@@ -131,7 +133,7 @@ body {
 input {
   color: black;
   padding: 12px;
-  width: 400px;
+  width: 800px;
   font-size: 20px;
   margin-bottom: 1.5rem;
   border: 2px solid #000;
