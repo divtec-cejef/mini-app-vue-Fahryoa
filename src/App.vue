@@ -5,7 +5,7 @@
     </header>
     <body>
       <h1>Application de Dactylographie</h1>
-      <p>Les mots a saisir : {{ lesMots }}</p>
+      <p>Les mots à saisir : {{ lesMots }}</p>
       <input v-model="texte" placeholder="Enter texte" />
       <button @click="demarrer()">Démarrer</button>
       <p> Temps : {{ temps }}</p>
